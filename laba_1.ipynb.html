@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<!-- saved from url=(0085)http://localhost:8888/tree/lab%201%2C%20%E2%84%961376%2C%20Afanasova%20Yana#notebooks -->
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <title>Home</title>
+    <link id="favicon" rel="shortcut icon" type="image/x-icon" href="http://localhost:8888/static/base/images/favicon.ico?v=50afa725b5de8b00030139d09b38620224d4e7dba47c07ef0e86d4643f30c9bfe6bb7e1a4a1c561aa32834480909a4b6fe7cd1e17f7159330b6b5914bf45a880">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./laba_1.ipynb_files/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="./laba_1.ipynb_files/jquery.typeahead.min.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="stylesheet" href="./laba_1.ipynb_files/style.min.css" type="text/css">
+    
+    <link rel="stylesheet" href="./laba_1.ipynb_files/custom.css" type="text/css">
+    <script src="./laba_1.ipynb_files/promise.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./laba_1.ipynb_files/react.production.min.js" type="text/javascript"></script>
+    <script src="./laba_1.ipynb_files/react-dom.production.min.js" type="text/javascript"></script>
+    <script src="./laba_1.ipynb_files/index.js" type="text/javascript"></script>
+    <script src="./laba_1.ipynb_files/require.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+      require.config({
+          
+          urlArgs: "v=20231031164418",
+          
+          baseUrl: '/static/',
+          paths: {
+            'auth/js/main': 'auth/js/main.min',
+            custom : '/custom',
+            nbextensions : '/nbextensions',
+            kernelspecs : '/kernelspecs',
+            underscore : 'components/underscore/underscore-min',
+            backbone : 'components/backbone/backbone-min',
+            jed: 'components/jed/jed',
+            jquery: 'components/jquery/jquery.min',
+            json: 'components/requirejs-plugins/src/json',
+            text: 'components/requirejs-text/text',
+            bootstrap: 'components/bootstrap/dist/js/bootstrap.min',
+            bootstraptour: 'components/bootstrap-tour/build/js/bootstrap-tour.min',
+            'jquery-ui': 'components/jquery-ui/dist/jquery-ui.min',
+            moment: 'components/moment/min/moment-with-locales',
+            codemirror: 'components/codemirror',
+            termjs: 'components/xterm.js/xterm',
+            typeahead: 'components/jquery-typeahead/dist/jquery.typeahead.min',
+          },
+          map: { // for backward compatibility
+              "*": {
+                  "jqueryui": "jquery-ui",
+              }
+          },
+          shim: {
+            typeahead: {
+              deps: ["jquery"],
+              exports: "typeahead"
+            },
+            underscore: {
+              exports: '_'
+            },
+            backbone: {
+              deps: ["underscore", "jquery"],
+              exports: "Backbone"
+            },
+            bootstrap: {
+              deps: ["jquery"],
+              exports: "bootstrap"
+            },
+            bootstraptour: {
+              deps: ["bootstrap"],
+              exports: "Tour"
+            },
+            "jquery-ui": {
+              deps: ["jquery"],
+              exports: "$"
+            }
+          },
+          waitSeconds: 30,
+      });
+
+      require.config({
+          map: {
+              '*':{
+                'contents': 'services/contents',
+              }
+          }
+      });
+
+      // error-catching custom.js shim.
+      define("custom", function (require, exports, module) {
+          try {
+              var custom = require('custom/custom');
+              console.debug('loaded custom.js');
+              return custom;
+          } catch (e) {
+              console.error("error loading custom.js", e);
+              return {};
+          }
+      })
+
+      // error-catching custom-preload.js shim.
+      define("custom-preload", function (require, exports, module) {
+          try {
+              var custom = require('custom/custom-preload');
+              console.debug('loaded custom-preload.js');
+              return custom;
+          } catch (e) {
+              console.error("error loading custom-preload.js", e);
+              return {};
+          }
+      })
+
+    document.nbjs_translations = {"domain": "nbjs", "locale_data": {"nbjs": {"": {"domain": "nbjs"}}}};
+    document.documentElement.lang = navigator.language.toLowerCase();
+    </script>
+
+    
+    
+
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="services/contents" src="./laba_1.ipynb_files/contents.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="custom/custom-preload" src="./laba_1.ipynb_files/custom-preload.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="custom/custom" src="./laba_1.ipynb_files/custom.js"></script><style>#tr-popup,#tr-popup * {all: unset;}#tr-popup {font: 15px "Segoe UI", Arial, Helvetica, sans-serif;color: #222;padding: 24px;display: block;z-index: 2147483647;position: absolute;max-width: 400px;min-width: 300px;direction: ltr;text-align: left;background: #fff;border-radius: 2px;box-sizing: border-box;box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 12px 24px 0 rgba(51, 51, 51, 0.3);transition: opacity, visibility;transition-duration: 0.2s;}#tr-popup[data-hidden="true"] {opacity: 0;visibility: hidden;}#tr-popup[data-position="top"] {margin-top: -12px;}#tr-popup[data-position="bottom"] {margin-top: 12px;}#tr-popup .tr-popup__arrow {top: 100%;left: 50%;width: 26px;height: 12px;display: block;position: absolute;margin-left: -13px;margin-top: -1px;background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNiIgaGVpZ2h0PSIxMiI+PHBhdGggZD0iTTAgMGwxMyAxMkwyNiAweiIgb3BhY2l0eT0iLjEiLz48cGF0aCBkPSJNMSAwbDEyIDExTDI1IDB6IiBmaWxsPSIjZmZmIi8+PC9zdmc+") no-repeat;}#tr-popup[data-position="bottom"] .tr-popup__arrow {top: auto;bottom: 100%;margin-bottom: -1px;transform: rotate(180deg);}#tr-popup .tr-popup__value,#tr-popup .tr-popup__block {word-wrap: break-word;white-space: pre-wrap;}[data-type="trSpan"][data-translated="true"][data-source-lang="ja"],[data-type="trSpan"][data-translated="true"][data-source-lang="zh"],#tr-popup .tr-popup__title_original,#tr-popup .tr-popup__block_a,#tr-popup .tr-popup__block_b,#tr-popup .tr-popup__button {font-family: "Segoe UI", Arial, Helvetica, sans-serif !important;}#tr-popup .tr-popup__title_original {font-weight: bold;}#tr-popup .tr-popup__block {display: block;}#tr-popup .tr-popup__link {cursor: pointer;-webkit-user-select: none;user-select: none;}#tr-popup .tr-popup__link_suggest {color: #1378d7;font-size: 13px;line-height: 18px;margin-right: 22px;}#tr-popup .tr-popup__link_suggest:hover,#tr-popup .tr-popup__link_suggest:active {color: #000;}#tr-popup .tr-popup__logo {height: 18px;opacity: 0.3;display: inline-block;transition: opacity 0.2s;vertical-align: top;}#tr-popup .tr-popup__logo_company {width: 34px;filter: brightness(0);background: url("https://yastatic.net/s3/trbro/v20.5.1.0/i/service_logo.svg");background-size: 34px;background-position: 0 -18px;}#tr-popup[lang="ru"] .tr-popup__logo_company {background-position: 0 0;}#tr-popup .tr-popup__logo_service {width: 42px;background: url("https://yastatic.net/s3/trbro/v20.5.1.0/i/service_name.svg");margin-left: 2px;background-size: 63px;background-position: 0 -18px;}#tr-popup[lang="ru"] .tr-popup__logo_service {width: 57px;background-position: 0 0;}#tr-popup[lang="uk"] .tr-popup__logo_service {width: 56px;background-position: 0 -36px;}#tr-popup[lang="tr"] .tr-popup__logo_service {width: 25px;background-position: 0 -54px;}#tr-popup .tr-popup__link_service:hover .tr-popup__logo {opacity: 0.6;}#tr-popup .tr-popup__input {width: 100%;height: 80px;resize: none;border: 2px solid #e5e5e5;padding: 8px;display: block;font-size: 15px;box-sizing: border-box;border-radius: 2px;}#tr-popup .tr-popup__input:focus {border-color: #bbb;}#tr-popup .tr-popup__block_a,#tr-popup .tr-popup__block_b {margin-top: 16px;}#tr-popup .tr-popup__block_a {display: flex;justify-content: space-between;}#tr-popup .tr-popup__block_b {position: relative;}#tr-popup .tr-popup__block_submit {text-align: right;margin-top: 24px;}#tr-popup .tr-popup__overlay {top: 0;left: 0;right: 0;bottom: 0;position: absolute;}#tr-popup .tr-popup__overlay_submitted {color: #999;z-index: 1;display: flex;background: #fff;align-items: center;justify-content: center;}#tr-popup:not([data-expanded="true"]) .tr-popup__block_b,#tr-popup:not([data-submitted="true"]) .tr-popup__overlay_submitted {display: none;}#tr-popup .tr-popup__menu {font-size: 13px;opacity: 0;visibility: hidden;white-space: nowrap;position: absolute;bottom: 100%;margin-bottom: 8px;padding: 4px 14px;z-index: 1;background-color: #f5f5f5;border: 1px solid #bbb;border-radius: 2px;box-shadow: 0px 0 0 1px rgba(0, 0, 0, 0.1), 0 8px 14px 0 rgba(51, 51, 51, 0.3);}#tr-popup[data-menu-position="left"] .tr-popup__menu {right: 0;}#tr-popup[data-menu="true"] .tr-popup__menu {opacity: 1;visibility: visible;}#tr-popup .tr-popup__menu:hover {background-color: #efefef;}#tr-popup .tr-popup__button {cursor: pointer;display: inline-block;-webkit-user-select: none;user-select: none;}#tr-popup .tr-popup__button_menu,#tr-popup .tr-popup__button_close {top: 4px;width: 20px;height: 20px;opacity: 0.3;position: absolute;}#tr-popup .tr-popup__button_close {right: 4px;background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PHBhdGggZD0iTTkuMjkzIDEwTDYuMTQ2IDYuODU0YS41LjUgMCAxIDEgLjcwOC0uNzA4TDEwIDkuMjkzbDMuMTQ2LTMuMTQ3YS41LjUgMCAwIDEgLjcwOC43MDhMMTAuNzA3IDEwbDMuMTQ3IDMuMTQ2YS41LjUgMCAwIDEtLjcwOC43MDhMMTAgMTAuNzA3bC0zLjE0NiAzLjE0N2EuNS41IDAgMCAxLS43MDgtLjcwOEw5LjI5MyAxMHoiLz48L3N2Zz4=");}#tr-popup .tr-popup__button_menu {right: 24px;background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHdpZHRoPSIyMCI+PHBhdGggZD0ibTUgNnYxaDEwdi0xaC0xMHptMCAzdjFoMTB2LTFoLTEwem0wIDN2MWgxMHYtMWgtMTB6Ii8+PC9zdmc+");}#tr-popup .tr-popup__button_menu:hover,#tr-popup .tr-popup__button_close:hover {opacity: 0.5;}#tr-popup .tr-popup__button_close:active {opacity: 0.6;}#tr-popup[data-menu="true"] .tr-popup__button_menu {opacity: 1;}#tr-popup .tr-popup__button_submit {color: #000;height: 28px;padding: 0 16px;font-size: 13px;min-width: 112px;background: #fc0;box-sizing: border-box;text-align: center;line-height: 28px;border-radius: 2px;}#tr-popup .tr-popup__button_submit:hover {background: #ffb800;}#tr-popup .tr-popup__button_submit:active {background: #ffa400;}#tr-popup[data-invalid="true"] .tr-popup__button_submit {color: rgba(0, 0, 0, 0.5);cursor: default;background: rgba(0, 0, 0, 0.1);}[data-type="trSpan"][data-selected="true"] {color: #222 !important;background: #cce4f7 !important;}[data-type="trSpan"] {font-size: inherit !important;}</style></head>
+
+<body class="" data-jupyter-api-token="e3fd10a9b5bc9358419bde3a6d309e61d79a569ba4b353f1" data-base-url="/" data-notebook-path="" data-terminals-available="True" data-server-root="~\AppData\Local\Programs\Python\Python310\Scripts" dir="ltr" style="">
+
+<noscript>
+    <div id='noscript'>
+      Jupyter Notebook requires JavaScript.<br>
+      Please enable it to proceed. 
+  </div>
+</noscript>
+
+<div id="header" role="navigation" aria-label="Главное меню" style="display: block;">
+  <div id="newsId" style="display: inline;">
+    
+    <div class="alert alert-info" role="alert">
+      <div style="display: flex">
+        <div>
+          <span class="label label-warning"><ya-tr-span data-index="388-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="UPDATE" data-translation="Обновить" data-ch="0" data-type="trSpan">Обновить</ya-tr-span></span><ya-tr-span data-index="388-1" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="Read " data-translation="Читать " data-ch="0" data-type="trSpan"> Читать </ya-tr-span><a href="https://jupyter-notebook.readthedocs.io/en/latest/migrate_to_notebook7.html" style="text-decoration: underline;" target="_blank"><ya-tr-span data-index="388-2" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="the migration plan" data-translation="план миграции" data-ch="0" data-type="trSpan">план миграции</ya-tr-span></a><ya-tr-span data-index="388-3" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="to Notebook 7 to learn about the new features and the actions to take if you are using extensions - Please note that updating to Notebook 7 might break some of your extensions. " data-translation="в Notebook 7 чтобы узнать о новых функциях и действиях, которые необходимо предпринять, если вы используете расширения, пожалуйста, обратите внимание, что обновление до Notebook 7 может привести к поломке некоторых из ваших расширений. " data-ch="0" data-type="trSpan"> в Notebook 7 чтобы узнать о новых функциях и действиях, которые необходимо предпринять, если вы используете расширения, пожалуйста, обратите внимание, что обновление до Notebook 7 может привести к поломке некоторых из ваших расширений. </ya-tr-span></div>
+        <div style="margin-left: auto;">
+          <a href="http://localhost:8888/tree/lab%201%2C%20%E2%84%961376%2C%20Afanasova%20Yana" onclick="alert(&#39;This message will not be shown anymore.&#39;); return false;">
+            <button type="button" class="btn btn-default btn-xs" id="dontShowId"><ya-tr-span data-index="389-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value=" Don&#39;t show anymore " data-translation=" Больше не показываться " data-ch="0" data-type="trSpan"> Больше не показываться </ya-tr-span></button>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div id="header-container" class="container">
+  <div id="ipython_notebook" class="nav navbar-brand"><a href="http://localhost:8888/tree?token=e3fd10a9b5bc9358419bde3a6d309e61d79a569ba4b353f1" title="Информационная панель">
+      <img src="./laba_1.ipynb_files/logo.png" alt="Блокнот Jupyter">
+  </a></div>
+
+  
+  <span class="flex-spacer"></span>
+  
+  
+  
+    <span id="shutdown_widget">
+      <button id="shutdown" class="btn btn-sm navbar-btn" title="Остановите сервер Jupyter"><ya-tr-span data-index="390-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value=" Quit " data-translation=" ВЫЙТИ " data-ch="0" data-type="trSpan" data-selected="false"> ВЫЙТИ </ya-tr-span></button>
+    </span>
+  
+
+  
+  
+  
+  
+
+    <span id="login_widget">
+      
+        <button id="logout" class="btn btn-sm navbar-btn"><ya-tr-span data-index="390-1" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="Logout" data-translation="Выход" data-ch="0" data-type="trSpan" data-selected="false">Выход</ya-tr-span></button>
+      
+    </span>
+
+  
+
+  
+  
+  </div>
+  <div class="header-bar"></div>
+
+  
+  
+</div>
+
+<div id="site" style="display: block; height: 530.409px;">
+
+
+  <div id="ipython-main-app" class="container">
+    <div id="tab_content" class="tabbable" role="main">
+      <ul id="tabs" class="nav nav-tabs">
+        <li class="active"><a href="http://localhost:8888/tree/lab%201%2C%20%E2%84%961376%2C%20Afanasova%20Yana#notebooks" data-toggle="tab"><ya-tr-span data-index="391-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="Files" data-translation="Файлы" data-ch="0" data-type="trSpan">Файлы</ya-tr-span></a></li>
+        <li><a href="http://localhost:8888/tree/lab%201%2C%20%E2%84%961376%2C%20Afanasova%20Yana#running" data-toggle="tab"><ya-tr-span data-index="392-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="Running" data-translation="Выполняется" data-ch="0" data-type="trSpan" data-selected="false">Выполняется</ya-tr-span></a></li>
+        <li><a href="http://localhost:8888/tree/lab%201%2C%20%E2%84%961376%2C%20Afanasova%20Yana#clusters" data-toggle="tab" class="clusters_tab_link"><ya-tr-span data-index="393-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="Clusters" data-translation="Кластеры" data-ch="0" data-type="trSpan" data-selected="false">Кластеры</ya-tr-span></a></li>
+      </ul>
+      <div class="tab-content">
+        <div id="notebooks" class="tab-pane active">
+          <div id="notebook_toolbar" class="row list_toolbar">
+            <div class="col-sm-8 no-padding">
+              <div class="dynamic-instructions" style="display: none;"><ya-tr-span data-index="416-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value=" Select items to perform actions on them. " data-translation=" Выберите предметы, чтобы выполнять с ними действия. " data-ch="0" data-type="trSpan"> Выберите предметы, чтобы выполнять с ними действия. </ya-tr-span></div>
+              <div class="dynamic-buttons">
+                  <button title="Выбран дубликат" aria-label="Дублируйте выбранную" class="duplicate-button btn btn-default btn-xs" aria-describedby="tooltip1" style="display: none;"><ya-tr-span data-index="394-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="Duplicate " data-translation="Дубликат " data-ch="0" data-type="trSpan">Дубликат </ya-tr-span></button>
+                  <div role="tooltip" id="tooltip1">Duplicate selected</div>
+                  <button title="Переименовать выбранное" aria-label="Переименовать выбранную" class="rename-button btn btn-default btn-xs" aria-describedby="tooltip2" style="display: inline-block;"><ya-tr-span data-index="395-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="Rename" data-translation="Переименовать" data-ch="0" data-type="trSpan" data-selected="false">Переименовать</ya-tr-span></button>
+                  <div role="tooltip" id="tooltip2"><ya-tr-span data-index="81-0" data-translated="false" data-source-lang="" data-target-lang="ru" data-value="Rename selected" data-translation="Переименовать выбранную" data-ch="0" data-type="trSpan">Rename selected</ya-tr-span></div> 
+                  <button title="Выбран ход" aria-label="Переместить выбранную" class="move-button btn btn-default btn-xs" aria-describedby="tooltip3" style="display: inline-block;"><ya-tr-span data-index="396-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="Move" data-translation="Переместить" data-ch="0" data-type="trSpan" data-selected="false">Переместить</ya-tr-span></button>
+                  <div role="tooltip" id="tooltip3">Move selected</div> 
+                  <button title="Скачать избранное" aria-label="Загрузить выбранную" class="download-button btn btn-default btn-xs" aria-describedby="tooltip4" style="display: none;"><ya-tr-span data-index="397-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="Download" data-translation="Скачать" data-ch="0" data-type="trSpan">Скачать</ya-tr-span></button>
+                  <div role="tooltip" id="tooltip4">Download selected</div>
+                  <button title="Выключение выбранных ноутбуков" aria-label="Выключите выбранные записные книжки" class="shutdown-button btn btn-default btn-xs btn-warning" aria-describedby="tooltip5" style="display: none;"><ya-tr-span data-index="398-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="Shutdown" data-translation="Выключение" data-ch="0" data-type="trSpan">Выключение</ya-tr-span></button>
+                  <div role="tooltip" id="tooltip5">Shutdown selected notebook(s)</div>  
+                  <button title="Выбранный вид" aria-label="Просмотреть выбранную" class="view-button btn btn-default btn-xs" aria-describedby="tooltip6" style="display: none;"><ya-tr-span data-index="399-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="View" data-translation="Вид" data-ch="0" data-type="trSpan">Вид</ya-tr-span></button>
+                  <div role="tooltip" id="tooltip6">View selected</div> 
+                  <button title="Редактировать выбранный" aria-label="Редактировать выбранную" class="edit-button btn btn-default btn-xs" aria-describedby="tooltip7" style="display: none;"><ya-tr-span data-index="400-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="Edit" data-translation="Редактировать" data-ch="0" data-type="trSpan">Редактировать</ya-tr-span></button>
+                  <div role="tooltip" id="tooltip7">Edit selected</div>  
+                  <button title="Удалить выбранный" aria-label="Удалить выбранную" class="delete-button btn btn-default btn-xs btn-danger" aria-describedby="tooltip8" style="display: inline-block;">
+                    <i class="fa fa-trash"></i>
+                  </button>
+                  <div role="tooltip" id="tooltip8"><ya-tr-span data-index="476-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="Delete selected" data-translation="Удалить выбранные" data-ch="0" data-type="trSpan">Удалить выбранные</ya-tr-span></div>
+              </div>
+            </div>
+            <div class="col-sm-4 no-padding tree-buttons">
+              <div class="pull-right">
+                <form id="alternate_upload" class="alternate_upload">
+                  <span id="notebook_list_info" class="toolbar_info">
+                  <span id="upload_span" class="btn btn-xs btn-default btn-upload" role="button" tabindex="0">
+                    <input id="upload_span_input" title="Нажмите, чтобы найти файл для загрузки." type="file" name="datafile" class="fileinput" multiple="multiple" tabindex="-1"><ya-tr-span data-index="401-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value=" Upload " data-translation=" Загрузка " data-ch="0" data-type="trSpan"> Загрузка </ya-tr-span></span>
+                  </span>
+                </form>
+                <div id="new-buttons" class="btn-group">
+                  <button class="dropdown-toggle btn btn-default btn-xs" id="new-dropdown-button" data-toggle="dropdown" aria-expanded="false">
+                  <span><ya-tr-span data-index="402-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="New" data-translation="Новое" data-ch="0" data-type="trSpan" data-selected="false">Новое</ya-tr-span></span>
+                  <span class="caret"></span>
+                  <span class="sr-only"><ya-tr-span data-index="402-1" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="Toggle Dropdown" data-translation="Переключить Выпадающий список" data-ch="0" data-type="trSpan" data-selected="false">Переключить Выпадающий список</ya-tr-span></span>
+                  </button>
+                  <ul id="new-menu" class="dropdown-menu" role="menu">
+                    <li role="menuitem" class="dropdown-header" id="notebook-kernels"><ya-tr-span data-index="16-0" data-translated="false" data-source-lang="" data-target-lang="ru" data-value="Notebook:" data-translation="Записная книжка:" data-ch="0" data-type="trSpan">Notebook:</ya-tr-span></li><li id="kernel-python3"><a aria-label="python3" role="menuitem" href="http://localhost:8888/tree/lab%201%2C%20%E2%84%961376%2C%20Afanasova%20Yana#" title="Create a new notebook with Python 3 (ipykernel)"><ya-tr-span data-index="17-0" data-translated="false" data-source-lang="" data-target-lang="ru" data-value="Python 3 (ipykernel)" data-translation="Python 3 (ipykernel)" data-ch="0" data-type="trSpan" data-selected="false">Python 3 (ipykernel)</ya-tr-span></a></li>
+                    <li role="presentation" class="divider"></li>
+                    <li role="menuitem" class="dropdown-header"><ya-tr-span data-index="18-0" data-translated="false" data-source-lang="" data-target-lang="ru" data-value="Other:" data-translation="Другое:" data-ch="0" data-type="trSpan">Other:</ya-tr-span></li>
+                    <li role="none" id="new-file">
+                        <a role="menuitem" tabindex="-1" href="http://localhost:8888/tree/lab%201%2C%20%E2%84%961376%2C%20Afanasova%20Yana#"><ya-tr-span data-index="19-0" data-translated="false" data-source-lang="" data-target-lang="ru" data-value="Text File" data-translation="Текстовый файл" data-ch="0" data-type="trSpan" data-selected="false">Text File</ya-tr-span></a>
+                    </li>
+                    <li role="none" id="new-folder">
+                        <a role="menuitem" tabindex="-1" href="http://localhost:8888/tree/lab%201%2C%20%E2%84%961376%2C%20Afanasova%20Yana#"><ya-tr-span data-index="20-0" data-translated="false" data-source-lang="" data-target-lang="ru" data-value="Folder" data-translation="Папка" data-ch="0" data-type="trSpan">Folder</ya-tr-span></a>
+                    </li>
+                    
+                    <li role="none" id="new-terminal">
+                        <a role="menuitem" tabindex="-1" href="http://localhost:8888/tree/lab%201%2C%20%E2%84%961376%2C%20Afanasova%20Yana#"><ya-tr-span data-index="21-0" data-translated="false" data-source-lang="" data-target-lang="ru" data-value="Terminal" data-translation="Терминал" data-ch="0" data-type="trSpan" data-selected="false">Terminal</ya-tr-span></a>
+                    </li>
+                    
+                  </ul>
+                </div>
+                <div class="btn-group">
+                    <button id="refresh_notebook_list" title="Обновить список записных книжек" aria-label="Обновить список записных книжек" class="btn btn-default btn-xs"><i class="fa fa-refresh"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="notebook_list" class="list_container">
+            <div id="notebook_list_header" class="row list_header">
+              <div class="btn-group dropdown" id="tree-selector">
+                <button title="Выбрать Все / Нет" aria-label="Selected, 1 items" type="button" class="btn btn-default btn-xs" id="button-select-all" role="checkbox">
+                  <input type="checkbox" class="pull-left tree-selector" id="select-all" tabindex="-1"><span id="counter-select-all"><ya-tr-span data-index="686-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="1" data-translation="1" data-ch="0" data-type="trSpan">1</ya-tr-span></span>
+                </button>
+                <button title="Выберите папки/Все тетради/Запущенные/Файлы" class="btn btn-default btn-xs dropdown-toggle" type="button" id="tree-selector-btn" data-toggle="dropdown" aria-expanded="false">
+                  <span class="sr-only"><ya-tr-span data-index="686-1" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="checkb" data-translation="checkb" data-ch="0" data-type="trSpan">checkb</ya-tr-span></span>
+                  <span class="caret"></span>
+                  <span class="sr-only"><ya-tr-span data-index="686-2" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="oxToggle Dropdown" data-translation="oxToggle Dropdown" data-ch="0" data-type="trSpan">oxToggle Dropdown</ya-tr-span></span>
+                </button>
+                <ul id="selector-menu" class="dropdown-menu" role="menu" aria-labelledby="tree-selector-btn">
+                  <li role="none"><a id="select-folders" role="menuitem" tabindex="-1" href="http://localhost:8888/tree/lab%201%2C%20%E2%84%961376%2C%20Afanasova%20Yana#" title="Select All Folders"><i class="menu_icon folder_icon icon-fixed-width"></i>&nbsp;Folders</a></li>
+                  <li role="none"><a id="select-notebooks" role="menuitem" tabindex="-1" href="http://localhost:8888/tree/lab%201%2C%20%E2%84%961376%2C%20Afanasova%20Yana#" title="Select All Notebooks"><i class="menu_icon notebook_icon icon-fixed-width"></i>&nbsp;All Notebooks</a></li>
+                  <li role="none"><a id="select-running-notebooks" role="menuitem" tabindex="-1" href="http://localhost:8888/tree/lab%201%2C%20%E2%84%961376%2C%20Afanasova%20Yana#" title="Select Running Notebooks"><i class="menu_icon running_notebook_icon icon-fixed-width"></i>&nbsp;Running</a></li>
+                  <li role="none"><a id="select-files" role="menuitem" tabindex="-1" href="http://localhost:8888/tree/lab%201%2C%20%E2%84%961376%2C%20Afanasova%20Yana#" title="Select All Files"><i class="menu_icon file_icon icon-fixed-width"></i>&nbsp;Files</a></li>
+                </ul>
+              </div>
+              <div id="project_name">
+                <ul class="breadcrumb"><li><a href="http://localhost:8888/tree" title="Link to root folder"><i class="fa fa-folder"></i></a></li><li><a href="http://localhost:8888/tree"></a></li></ul>
+              </div>
+              <div id="sort_buttons" class="pull-right">
+                <div id="sort_name" class="sort_button">
+                  <button type="button" class="btn btn-xs btn-default sort-action" id="sort-name" aria-label="Сортировать по названию"><ya-tr-span data-index="405-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value=" Name " data-translation=" Имя " data-ch="0" data-type="trSpan" data-selected="false"> Имя </ya-tr-span><i class="fa"></i>
+                  </button>
+                </div>
+                <div id="last_modified" class="sort_button">
+                    <button type="button" class="btn btn-xs btn-default sort-action" id="last-modified" aria-label="Сортировать по последнему изменению"><ya-tr-span data-index="406-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value=" Last Modified " data-translation=" Последнее изменение " data-ch="0" data-type="trSpan" data-selected="false"> Последнее изменение </ya-tr-span><i class="fa"></i>
+                    </button>
+                </div>
+                <div id="file_size" class="sort_button">
+                    <button type="button" class="btn btn-xs btn-default sort-action" id="file-size" aria-label="Сортировать по размеру файла"><ya-tr-span data-index="407-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value=" File size " data-translation=" Размер файла " data-ch="0" data-type="trSpan"> Размер файла </ya-tr-span><i class="fa"></i>
+                    </button>
+                </div>
+              </div>
+            </div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon folder_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/tree/lab%201%2C%20%E2%84%961376%2C%20Afanasova%20Yana"><span class="item_name"><ya-tr-span data-index="687-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="lab 1, №1376, Afanasova Yana" data-translation="lab 1, №1376, Afanasova Yana" data-ch="0" data-type="trSpan">lab 1, №1376, Afanasova Yana</ya-tr-span></span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-10-31 21:35"><ya-tr-span data-index="688-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="8 минут назад" data-translation="8 минут назад" data-ch="0" data-type="trSpan">8 минут назад</ya-tr-span></span><span class="file_size pull-right">&nbsp;</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon folder_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/tree/M_L_laba1"><span class="item_name"><ya-tr-span data-index="689-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="M_L_laba1" data-translation="M_L_laba1" data-ch="0" data-type="trSpan">M_L_laba1</ya-tr-span></span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-10-31 17:00"><ya-tr-span data-index="690-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="5 часов назад" data-translation="5 часов назад" data-ch="0" data-type="trSpan">5 часов назад</ya-tr-span></span><span class="file_size pull-right">&nbsp;</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/f2py.exe" target="_blank"><span class="item_name"><ya-tr-span data-index="691-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="f2py.exe" data-translation="f2py.exe" data-ch="0" data-type="trSpan">f2py.exe</ya-tr-span></span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:26"><ya-tr-span data-index="692-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="5 месяцев назад" data-translation="5 месяцев назад" data-ch="0" data-type="trSpan">5 месяцев назад</ya-tr-span></span><span class="file_size pull-right"><ya-tr-span data-index="692-1" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="108 kB" data-translation="108 kB" data-ch="0" data-type="trSpan">108 kB</ya-tr-span></span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/fonttools.exe" target="_blank"><span class="item_name"><ya-tr-span data-index="693-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="fonttools.exe" data-translation="fonttools.exe" data-ch="0" data-type="trSpan">fonttools.exe</ya-tr-span></span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-10-31 18:19"><ya-tr-span data-index="694-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="3 часа назад" data-translation="3 часа назад" data-ch="0" data-type="trSpan">3 часа назад</ya-tr-span></span><span class="file_size pull-right"><ya-tr-span data-index="694-1" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="108 kB" data-translation="108 kB" data-ch="0" data-type="trSpan">108 kB</ya-tr-span></span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/ipython.exe" target="_blank"><span class="item_name"><ya-tr-span data-index="695-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="ipython.exe" data-translation="ipython.exe" data-ch="0" data-type="trSpan">ipython.exe</ya-tr-span></span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:26"><ya-tr-span data-index="696-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="5 месяцев назад" data-translation="5 месяцев назад" data-ch="1" data-type="trSpan">5 месяцев назад</ya-tr-span></span><span class="file_size pull-right"><ya-tr-span data-index="696-1" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="108 kB" data-translation="108 kB" data-ch="1" data-type="trSpan">108 kB</ya-tr-span></span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/ipython3.exe" target="_blank"><span class="item_name"><ya-tr-span data-index="697-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="ipython3.exe" data-translation="ipython3.exe" data-ch="0" data-type="trSpan">ipython3.exe</ya-tr-span></span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:26"><ya-tr-span data-index="698-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="5 месяцев назад" data-translation="5 месяцев назад" data-ch="1" data-type="trSpan">5 месяцев назад</ya-tr-span></span><span class="file_size pull-right"><ya-tr-span data-index="698-1" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="108 kB" data-translation="108 kB" data-ch="1" data-type="trSpan">108 kB</ya-tr-span></span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/jsonpointer" target="_blank"><span class="item_name"><ya-tr-span data-index="699-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="jsonpointer" data-translation="jsonpointer" data-ch="0" data-type="trSpan">jsonpointer</ya-tr-span></span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:25"><ya-tr-span data-index="700-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="5 месяцев назад" data-translation="5 месяцев назад" data-ch="0" data-type="trSpan">5 месяцев назад</ya-tr-span></span><span class="file_size pull-right"><ya-tr-span data-index="700-1" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="1.89 kB" data-translation="1.89 kB" data-ch="0" data-type="trSpan">1.89 kB</ya-tr-span></span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/jsonschema.exe" target="_blank"><span class="item_name"><ya-tr-span data-index="701-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="jsonschema.exe" data-translation="jsonschema.exe" data-ch="0" data-type="trSpan">jsonschema.exe</ya-tr-span></span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:25"><ya-tr-span data-index="702-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="5 месяцев назад" data-translation="5 месяцев назад" data-ch="1" data-type="trSpan">5 месяцев назад</ya-tr-span></span><span class="file_size pull-right"><ya-tr-span data-index="702-1" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="108 kB" data-translation="108 kB" data-ch="1" data-type="trSpan">108 kB</ya-tr-span></span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/jupyter-bundlerextension.exe" target="_blank"><span class="item_name"><ya-tr-span data-index="703-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="jupyter-bundlerextension.exe" data-translation="jupyter-bundlerextension.exe" data-ch="0" data-type="trSpan">jupyter-bundlerextension.exe</ya-tr-span></span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:26"><ya-tr-span data-index="704-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="5 месяцев назад" data-translation="5 месяцев назад" data-ch="1" data-type="trSpan">5 месяцев назад</ya-tr-span></span><span class="file_size pull-right"><ya-tr-span data-index="704-1" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="108 kB" data-translation="108 kB" data-ch="1" data-type="trSpan">108 kB</ya-tr-span></span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/jupyter-console.exe" target="_blank"><span class="item_name"><ya-tr-span data-index="705-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="jupyter-console.exe" data-translation="jupyter-console.exe" data-ch="0" data-type="trSpan">jupyter-console.exe</ya-tr-span></span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:26"><ya-tr-span data-index="706-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="5 месяцев назад" data-translation="5 месяцев назад" data-ch="1" data-type="trSpan">5 месяцев назад</ya-tr-span></span><span class="file_size pull-right"><ya-tr-span data-index="706-1" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="108 kB" data-translation="108 kB" data-ch="1" data-type="trSpan">108 kB</ya-tr-span></span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/jupyter-dejavu.exe" target="_blank"><span class="item_name"><ya-tr-span data-index="707-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="jupyter-dejavu.exe" data-translation="jupyter-dejavu.exe" data-ch="0" data-type="trSpan">jupyter-dejavu.exe</ya-tr-span></span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:26"><ya-tr-span data-index="708-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="5 месяцев назад" data-translation="5 месяцев назад" data-ch="1" data-type="trSpan">5 месяцев назад</ya-tr-span></span><span class="file_size pull-right"><ya-tr-span data-index="708-1" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="108 kB" data-translation="108 kB" data-ch="1" data-type="trSpan">108 kB</ya-tr-span></span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/jupyter-events.exe" target="_blank"><span class="item_name"><ya-tr-span data-index="709-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="jupyter-events.exe" data-translation="jupyter-events.exe" data-ch="0" data-type="trSpan">jupyter-events.exe</ya-tr-span></span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:26"><ya-tr-span data-index="710-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="5 месяцев назад" data-translation="5 месяцев назад" data-ch="1" data-type="trSpan">5 месяцев назад</ya-tr-span></span><span class="file_size pull-right"><ya-tr-span data-index="710-1" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="108 kB" data-translation="108 kB" data-ch="1" data-type="trSpan">108 kB</ya-tr-span></span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/jupyter-execute.exe" target="_blank"><span class="item_name"><ya-tr-span data-index="711-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="jupyter-execute.exe" data-translation="jupyter-execute.exe" data-ch="0" data-type="trSpan">jupyter-execute.exe</ya-tr-span></span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:26"><ya-tr-span data-index="712-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="5 месяцев назад" data-translation="5 месяцев назад" data-ch="1" data-type="trSpan">5 месяцев назад</ya-tr-span></span><span class="file_size pull-right"><ya-tr-span data-index="712-1" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="108 kB" data-translation="108 kB" data-ch="1" data-type="trSpan">108 kB</ya-tr-span></span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/jupyter-kernel.exe" target="_blank"><span class="item_name"><ya-tr-span data-index="713-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="jupyter-kernel.exe" data-translation="jupyter-kernel.exe" data-ch="0" data-type="trSpan">jupyter-kernel.exe</ya-tr-span></span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:26"><ya-tr-span data-index="714-0" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="5 месяцев назад" data-translation="5 месяцев назад" data-ch="1" data-type="trSpan">5 месяцев назад</ya-tr-span></span><span class="file_size pull-right"><ya-tr-span data-index="714-1" data-translated="true" data-source-lang="" data-target-lang="ru" data-value="108 kB" data-translation="108 kB" data-ch="1" data-type="trSpan">108 kB</ya-tr-span></span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/jupyter-kernelspec.exe" target="_blank"><span class="item_name">jupyter-kernelspec.exe</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:26">5 месяцев назад</span><span class="file_size pull-right">108 kB</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/jupyter-migrate.exe" target="_blank"><span class="item_name">jupyter-migrate.exe</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:25">5 месяцев назад</span><span class="file_size pull-right">108 kB</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/jupyter-nbclassic-bundlerextension.exe" target="_blank"><span class="item_name">jupyter-nbclassic-bundlerextension.exe</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:26">5 месяцев назад</span><span class="file_size pull-right">108 kB</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/jupyter-nbclassic-extension.exe" target="_blank"><span class="item_name">jupyter-nbclassic-extension.exe</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:26">5 месяцев назад</span><span class="file_size pull-right">108 kB</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/jupyter-nbclassic-serverextension.exe" target="_blank"><span class="item_name">jupyter-nbclassic-serverextension.exe</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:26">5 месяцев назад</span><span class="file_size pull-right">108 kB</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/jupyter-nbclassic.exe" target="_blank"><span class="item_name">jupyter-nbclassic.exe</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:26">5 месяцев назад</span><span class="file_size pull-right">108 kB</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/jupyter-nbconvert.exe" target="_blank"><span class="item_name">jupyter-nbconvert.exe</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:26">5 месяцев назад</span><span class="file_size pull-right">108 kB</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/jupyter-nbextension.exe" target="_blank"><span class="item_name">jupyter-nbextension.exe</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:26">5 месяцев назад</span><span class="file_size pull-right">108 kB</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/jupyter-notebook.exe" target="_blank"><span class="item_name">jupyter-notebook.exe</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:26">5 месяцев назад</span><span class="file_size pull-right">108 kB</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/jupyter-qtconsole.exe" target="_blank"><span class="item_name">jupyter-qtconsole.exe</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:26">5 месяцев назад</span><span class="file_size pull-right">102 kB</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/jupyter-run.exe" target="_blank"><span class="item_name">jupyter-run.exe</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:26">5 месяцев назад</span><span class="file_size pull-right">108 kB</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/jupyter-server.exe" target="_blank"><span class="item_name">jupyter-server.exe</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:26">5 месяцев назад</span><span class="file_size pull-right">108 kB</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/jupyter-serverextension.exe" target="_blank"><span class="item_name">jupyter-serverextension.exe</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:26">5 месяцев назад</span><span class="file_size pull-right">108 kB</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/jupyter-troubleshoot.exe" target="_blank"><span class="item_name">jupyter-troubleshoot.exe</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:25">5 месяцев назад</span><span class="file_size pull-right">108 kB</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/jupyter-trust.exe" target="_blank"><span class="item_name">jupyter-trust.exe</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:26">5 месяцев назад</span><span class="file_size pull-right">108 kB</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/jupyter.exe" target="_blank"><span class="item_name">jupyter.exe</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:25">5 месяцев назад</span><span class="file_size pull-right">108 kB</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/nltk.exe" target="_blank"><span class="item_name">nltk.exe</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:28">5 месяцев назад</span><span class="file_size pull-right">108 kB</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/pip.exe" target="_blank"><span class="item_name">pip.exe</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:25">5 месяцев назад</span><span class="file_size pull-right">108 kB</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/pip3.10.exe" target="_blank"><span class="item_name">pip3.10.exe</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:25">5 месяцев назад</span><span class="file_size pull-right">108 kB</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/pip3.exe" target="_blank"><span class="item_name">pip3.exe</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:25">5 месяцев назад</span><span class="file_size pull-right">108 kB</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/pyftmerge.exe" target="_blank"><span class="item_name">pyftmerge.exe</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-10-31 18:19">3 часа назад</span><span class="file_size pull-right">108 kB</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/pyftsubset.exe" target="_blank"><span class="item_name">pyftsubset.exe</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-10-31 18:19">3 часа назад</span><span class="file_size pull-right">108 kB</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/pygmentize.exe" target="_blank"><span class="item_name">pygmentize.exe</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:25">5 месяцев назад</span><span class="file_size pull-right">108 kB</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/pymorphy.exe" target="_blank"><span class="item_name">pymorphy.exe</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:27">5 месяцев назад</span><span class="file_size pull-right">108 kB</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/pywin32_postinstall.py" target="_blank"><span class="item_name">pywin32_postinstall.py</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:25">5 месяцев назад</span><span class="file_size pull-right">27.3 kB</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/pywin32_testall.py" target="_blank"><span class="item_name">pywin32_testall.py</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:25">5 месяцев назад</span><span class="file_size pull-right">3.72 kB</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/qtpy.exe" target="_blank"><span class="item_name">qtpy.exe</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:25">5 месяцев назад</span><span class="file_size pull-right">108 kB</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/send2trash.exe" target="_blank"><span class="item_name">send2trash.exe</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:25">5 месяцев назад</span><span class="file_size pull-right">108 kB</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/tqdm.exe" target="_blank"><span class="item_name">tqdm.exe</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:28">5 месяцев назад</span><span class="file_size pull-right">108 kB</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/ttx.exe" target="_blank"><span class="item_name">ttx.exe</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-10-31 18:19">3 часа назад</span><span class="file_size pull-right">108 kB</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><input type="checkbox" title="Click here to rename, delete, etc."><i class="item_icon file_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/edit/wsdump.exe" target="_blank"><span class="item_name">wsdump.exe</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="running-indicator" style="visibility: hidden;">Running</div></div><div class="pull-right"><span class="item_modified pull-left" title="2023-05-25 12:25">5 месяцев назад</span><span class="file_size pull-right">108 kB</span></div></div></div></div>
+          </div>
+        </div>
+        <div id="running" class="tab-pane">
+          <div id="running_toolbar" class="row list_toolbar">
+            <div class="col-sm-8 no-padding">
+              <span id="running_list_info" class="toolbar_info">Currently running Jupyter processes</span>
+            </div>
+            <div class="col-sm-4 no-padding tree-buttons">
+              <span id="running_buttons" class="pull-right toolbar_buttons">
+              <button id="refresh_running_list" title="Refresh running list" aria-label="Refresh running list" class="btn btn-default btn-xs"><i class="fa fa-refresh"></i></button>
+              </span>
+            </div>
+          </div>
+          <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <a data-toggle="collapse" data-target="#collapseOne" href="http://localhost:8888/tree/lab%201%2C%20%E2%84%961376%2C%20Afanasova%20Yana#">
+                  Terminals
+                <i class="fa fa-caret-down"></i></a>
+              </div>
+              <div id="collapseOne" class=" collapse in">
+                <div class="panel-body">
+                  <div id="terminal_list" class="list_container">
+                    <div id="terminal_list_header" class="row list_placeholder">
+                    
+                      <div> There are no terminals running. </div>
+                    
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <a data-toggle="collapse" data-target="#collapseTwo" href="http://localhost:8888/tree/lab%201%2C%20%E2%84%961376%2C%20Afanasova%20Yana#">
+                  Notebooks
+                <i class="fa fa-caret-down"></i></a>
+              </div>
+              <div id="collapseTwo" class=" collapse in">
+                <div class="panel-body">
+                  <div id="running_list" class="list_container">
+                    <div id="running_list_placeholder" class="row list_placeholder" style="display: none;">
+                      <div> There are no notebooks running. </div>
+                    </div>
+                  <div class="list_item row"><div class="col-md-12"><i class="item_icon running_notebook_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/notebooks/M_L_laba1/Untitled.ipynb" target="_blank"><span class="item_name">M_L_laba1/Untitled.ipynb</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="kernel-name">Python 3 (ipykernel)</div><button class="btn btn-warning btn-xs">Shutdown</button></div><div class="pull-right"><span class="item_modified pull-left" title="2023-10-31 21:43">несколько секунд назад</span><span class="file_size pull-right">&nbsp;</span></div></div></div></div><div class="list_item row"><div class="col-md-12"><i class="item_icon running_notebook_icon icon-fixed-width"></i><a class="item_link" href="http://localhost:8888/notebooks/lab%201%2C%20%E2%84%961376%2C%20Afanasova%20Yana/Untitled.ipynb" target="_blank"><span class="item_name">lab 1, №1376, Afanasova Yana/Untitled.ipynb</span></a><div class="pull-right"><div class="item_buttons pull-left"><div class="kernel-name">Python 3 (ipykernel)</div><button class="btn btn-warning btn-xs">Shutdown</button></div><div class="pull-right"><span class="item_modified pull-left" title="2023-10-31 21:43">несколько секунд назад</span><span class="file_size pull-right">&nbsp;</span></div></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="clusters" class="tab-pane">
+          Clusters tab is now provided by IPython parallel.
+          See '<a href="https://github.com/ipython/ipyparallel">IPython parallel</a>' for installation details.
+        </div>
+      </div><!-- class:tab-content -->
+    </div><!-- id:tab_content -->
+  </div><!-- ipython-main-app  -->
+
+
+</div>
+
+
+
+
+
+    
+
+    <script src="./laba_1.ipynb_files/main.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <script type="text/javascript">
+      $('#element').tooltip('enable')
+    </script>
+
+
+<script type="text/javascript">
+  function _remove_token_from_url() {
+    if (window.location.search.length <= 1) {
+      return;
+    }
+    var search_parameters = window.location.search.slice(1).split('&');
+    for (var i = 0; i < search_parameters.length; i++) {
+      if (search_parameters[i].split('=')[0] === 'token') {
+        // remote token from search parameters
+        search_parameters.splice(i, 1);
+        var new_search = '';
+        if (search_parameters.length) {
+          new_search = '?' + search_parameters.join('&');
+        }
+        var new_url = window.location.origin + 
+                      window.location.pathname + 
+                      new_search + 
+                      window.location.hash;
+        window.history.replaceState({}, "", new_url);
+        return;
+      }
+    }
+  }
+  _remove_token_from_url();
+  sys_info = {"notebook_version": "6.5.4", "notebook_path": "C:\\Users\\SkyNet\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\notebook", "commit_source": "", "commit_hash": "", "sys_version": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]", "sys_executable": "C:\\Users\\SkyNet\\AppData\\Local\\Programs\\Python\\Python310\\python.exe", "sys_platform": "win32", "platform": "Windows-10-10.0.17763-SP0", "os_name": "nt", "default_encoding": "utf-8"};
+  document.addEventListener('DOMContentLoaded', function () {
+    const newsId = document.querySelector('#newsId');
+    const dontShowId = document.querySelector('#dontShowId');
+    const showNotebookNews = localStorage.getItem('showNotebookNews');
+    dontShowId.addEventListener('click', () => {
+      localStorage.setItem('showNotebookNews', false);
+      newsId.style.display = 'none';
+    });
+    if (!showNotebookNews) newsId.style.display = 'inline';
+  });
+</script>
+
+
+<div id="tr-popup" class="tr-popup" translate="no" data-hidden="true" data-invalid="true" data-disabled="false" lang="ru" data-expanded="false" data-menu="false" data-translation="lab 1, №1376, Afanasova Yana" data-menu-position="right" data-submitted="false" style="top: 134.148px; left: 75px;"><div class="tr-popup__block"><span class="tr-popup__title_original">Оригинальный текст:</span> <span class="tr-popup__value">lab 1, №1376, Afanasova Yana</span></div><div class="tr-popup__block tr-popup__block_a"><span class="tr-popup__link tr-popup__link_suggest" data-action="expand">Предложить перевод</span><a href="https://translate.yandex.ru/" class="tr-popup__link tr-popup__link_service" target="_blank" data-action="navigate"><span class="tr-popup__logo tr-popup__logo_company"></span><span class="tr-popup__logo tr-popup__logo_service"></span></a></div><div class="tr-popup__block tr-popup__block_b"><textarea class="tr-popup__input" spellcheck="false" autocapitalize="off" autocorrect="off" autocomplete="off" maxlength="1000"></textarea><div class="tr-popup__block tr-popup__block_submit"><span role="button" class="tr-popup__button tr-popup__button_submit" data-action="send">Отправить</span></div><div class="tr-popup__overlay tr-popup__overlay_submitted">Спасибо, перевод отправлен</div></div><span role="button" class="tr-popup__button tr-popup__button_close" data-action="clickClose"></span><span role="button" class="tr-popup__button tr-popup__button_menu" data-action="clickMenu"><span class="tr-popup__menu" data-action="disablePopup">Отключить подсказку с оригинальным текстом</span></span><span class="tr-popup__arrow"></span></div></body></html>
